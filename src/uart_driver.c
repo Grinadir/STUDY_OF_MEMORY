@@ -1,5 +1,7 @@
 #include <iostm8l152c6.h>
-
+#include "utils.h"
+#include <stdint.h>
+#include <string.h>
 
 
 void init_uart(){
@@ -11,13 +13,14 @@ void init_uart(){
   
   USART1_BRR2 = 0x03; //скорость 9600bps
   USART1_BRR1 = 0x68;
-  USART1_DR='S';
-  USART1_DR='T';
+
 }
 
-void print(char str[]){
-  for(int i=0;i<=sizeof(str);i++){
+void print(char *str){
+  
+  for(uint8_t i=0;i<strlen(str);i++){
     USART1_DR=str[i];
+    delay(1000000);
        
   }
   

@@ -38,11 +38,11 @@ ShowSource=1
 [Simulator]
 Freq=16000000
 [DebugChecksum]
-Checksum=-610548022
+Checksum=-92658944
 [CallStack]
 ShowArgs=0
 [Disassembly]
-MixedMode=1
+MixedMode=0
 [DataSample]
 LogEnabled=0
 GraphEnabled=0
